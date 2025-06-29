@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe Book</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- ✅ Hero Banner Section yahaan hona chahiye -->
+  <div class="banner">
+    <div class="banner-text">
+      <h1>Welcome to Recipe Book</h1>
+      <p>Explore & Share Delicious Recipes 🍳</p>
+    </div>
+  </div>
+
+  <div class="overlay">
+    <div class="container">
+
+      <div class="header">
+        <h1>📓 Recipe Book</h1>
+        <h2>📚 My Recipes</h2>
+      </div>
+
+      {% if username %}
+        <p class="user-info">
+          👋 Hello, <strong>{{ username }}</strong>
+          <a href="{{ url_for('logout') }}" class="logout-link">🚪 Logout</a>
+        </p>
+      {% endif %}
+
+      <div style="text-align: center;">
+        <a href="/add" class="add-button">➕ Add Recipe</a>
+      </div>
+
+      <form method="GET" action="/" class="search-bar">
+        <input type="text" name="q" placeholder="🔍 Search by title..." value="{{ query or '' }}">
+        <button type="submit">Search</button>
+      </form>
+
+      {% if recipes %}
+        {% for recipe in recipes %}
+          <div class="recipe-card">
+            <h3>🍽️ {{ recipe.title }}</h3>
+            <p><strong>🧂 Ingredients:</strong><br>{{ recipe.ingredients }}</p>
+            <p><strong>👩‍🍳 Steps:</strong><br>{{ recipe.steps }}</p>
+            <div class="actions">
+              <a href="/edit/{{ recipe.id }}" class="action-button">✏️ Edit</a>
+              <a href="/delete/{{ recipe.id }}" class="action-button delete" onclick="return confirm('Are you sure?')">🗑️ Delete</a>
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p>No recipes yet!</p>
+      {% endif %}
+
+    </div>
+  </div>
+
+</body>
+</html>

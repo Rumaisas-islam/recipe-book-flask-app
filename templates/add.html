@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Recipe</title>
+
+  <!-- Style directly in head -->
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      margin: 0;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    input, textarea {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    /* ✅ Stylish Save Button */
+    button[type="submit"] {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 114, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 114, 255, 0.5);
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+    }
+
+    /* Back button styled simply */
+    .back-link {
+      margin-top: 10px;
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>➕ Add New Recipe</h1>
+
+  <!-- Form Start -->
+  <form method="POST" action="/add">
+    <div class="form-container">
+      <input type="text" name="title" placeholder="Recipe Title" required>
+      <textarea name="ingredients" placeholder="Ingredients..." required></textarea>
+      <textarea name="steps" placeholder="Steps to prepare..." required></textarea>
+
+      <!-- ✅ Stylish Button -->
+      <button type="submit">Save Recipe</button>
+
+      <!-- Back to Home link -->
+      <a href="/" class="back-link">← Back to Home</a>
+    </div>
+  </form>
+
+</body>
+</html>

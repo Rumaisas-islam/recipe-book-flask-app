@@ -1,0 +1,224 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212; /* Professional dark bg */
+  color: #fff;
+}
+
+/* Container */
+.overlay {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: #ffd166;
+}
+.header h2 {
+  font-size: 1.6em;
+  color: #f4f4f4;
+}
+
+/* Hello user and logout */
+.user-info {
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+.logout-link {
+  background-color: #ef476f;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+.logout-link:hover {
+  background-color: #d6336c;
+}
+
+/* Add Button */
+.add-button {
+  display: inline-block;
+  margin: 10px 0 20px;
+  padding: 10px 16px;
+  background-color: #06d6a0;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.add-button:hover {
+  background-color: #04b586;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+.search-bar button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffd166;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+.search-bar button:hover {
+  background-color: #e0b100;
+}
+
+/* Recipe Card */
+.recipe-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+.recipe-card:hover {
+  transform: translateY(-2px);
+}
+.recipe-card h3 {
+  margin-top: 0;
+  color: #ffd166;
+}
+.recipe-card p {
+  line-height: 1.6;
+}
+.recipe-card strong {
+  color: #ffd166;
+}
+
+/* Actions (Edit/Delete Buttons) */
+.actions {
+  margin-top: 10px;
+}
+.actions .action-button {
+  background-color: #118ab2;
+  color: white;
+  padding: 6px 14px;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9em;
+}
+.actions .delete {
+  background-color: #ef476f;
+}
+.actions .action-button:hover {
+  opacity: 0.9;
+}
+
+/* Stylish Save Button */
+button[type="submit"] {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 114, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.5);
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+}
+.banner {
+  background-image: url('https://images.unsplash.com/photo-1546069901-eacef0df6022?auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+}
+
+.banner-text {
+  position: relative;
+  color: white;
+  z-index: 2;
+}
+
+.banner-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.banner-text p {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+input, textarea {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 114, 255, 0.3);
+  transition: all 0.3s ease;
+}

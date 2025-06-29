@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Recipe Book</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 15px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+      color: #fff;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffd166;
+    }
+
+    .login-container form input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    .login-container form button {
+      width: 100%;
+      background-color: #06d6a0;
+      color: black;
+      font-weight: bold;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .login-container form button:hover {
+      background-color: #04b586;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>🔐 Welcome to Recipe Book</h2>
+    {% if error %}
+      <p style="color: #ff6b6b;">{{ error }}</p>
+    {% endif %}
+    <form method="POST">
+      <input type="text" name="username" placeholder="👤 Enter username" required>
+      <input type="password" name="password" placeholder="🔒 Enter password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>
