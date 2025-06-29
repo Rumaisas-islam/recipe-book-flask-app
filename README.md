@@ -49,9 +49,9 @@ recipe-book-flask-app/
 
 ## 🌐 Live Demo
 
-👉 [**Try the App Live**](https://2f28968c-0391-49f1-9bae-aacaa6870c74-00-2twh17b91y2fc.sisko.replit.dev/)
+🚫 Currently not deployed permanently.
 
-## 🚀 Run Locally
+You can test the app by cloning the repository and running locally:
 
 ```bash
 python app.py
