@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/banner.png" alt="Recipe Book Banner" />
+  <img src="banner.png" alt="Recipe Book Banner" />
 </p>
 
 <p align="center">
