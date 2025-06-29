@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/banner.png" alt="Recipe Book Banner" />
+</p>
+
 ```markdown
 # 🧾 Recipe Book - Flask App
 A beginner-friendly web app built with Flask that lets users **add and view cooking recipes**.
