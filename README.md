@@ -49,9 +49,7 @@ recipe-book-flask-app/
 
 ## 🌐 Live Demo
 
-🚫 Currently not deployed permanently.
-
-You can test the app by cloning the repository and running locally:
+✅ [Click here to view the live Recipe Book App](https://rumaisa.pythonanywhere.com)
 
 ```bash
 python app.py
